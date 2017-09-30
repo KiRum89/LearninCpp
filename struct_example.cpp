@@ -1,15 +1,26 @@
 #include <iostream>
 
-int a,b,c;
-a=b+c;
+
 
 
 struct myclass{
-	string poduct;
-	float price;
+	
+	static int k;
+	public:
+		
+		int i;		
+		float price;
+	private:
+		int j;
 	} a,b,c;
 
-void main(){
-a=b+c;
+	int myclass::k= 13;
+int main(){
 
+	a.i = 12;
+	std::cout << a.i<<std::endl;
+	a.k = 15;
+
+	std::cout << myclass::k<<std::endl;
+	return 0;
 }
